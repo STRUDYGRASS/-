@@ -12,7 +12,7 @@
         <option>--请选择--</option>
         <option value="option1">获取温度最高10大城市</option>
         <option value="option2" >获取温度最低10大城市</option>
-        <option value="option3">下拉3</option>
+        <option value="option3">获取平均温度和海拔的关系</option>
         </select>
 
         <button onclick="show_graph()">select</button>
@@ -25,6 +25,15 @@
             if ($("select[name='chose_graph'] option:selected").index() == 1){
                 $.ajax({
                 url: 'get_max10.php',
+                cache: false,
+                success: function(html) {
+                    $("#show_ground").html(html);
+                }
+            });
+            }
+            else if ($("select[name='chose_graph'] option:selected").index() == 3){
+                $.ajax({
+                url: 'scatter_alt-tmp.php',
                 cache: false,
                 success: function(html) {
                     $("#show_ground").html(html);
