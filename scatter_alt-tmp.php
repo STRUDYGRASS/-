@@ -51,7 +51,7 @@ var option = {
             type: 'scatter',
 
             symbolSize: function (val) {
-                return val[2] * 40;
+                return val[2] * 10;
             },
             data: data
         },
