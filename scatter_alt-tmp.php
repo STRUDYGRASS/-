@@ -5,7 +5,7 @@
 <?php
 #header("Content-type: text/html; charset=utf-8");
 set_time_limit(0);
-$output = exec('scatter_alt-tmp.py');
+$output = exec('C:\Users\User\AppData\Local\Programs\Python\Python37\python.exe scatter_alt-tmp.py');
 echo "<script>
 var data = ".$output.";
 </script>";
@@ -28,6 +28,10 @@ var option = {
         data: ['scatter']
     },
     tooltip: {
+        trigger: 'item',
+        axisPointer: {
+            type: 'cross'
+        }
     },
     xAxis: {
         type: 'value',

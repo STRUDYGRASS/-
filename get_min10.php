@@ -5,7 +5,7 @@
 <?php
 #header("Content-type: text/html; charset=utf-8");
 set_time_limit(0);
-$output = exec('C:\Users\User\AppData\Local\Programs\Python\Python37\python.exe get_max10.py');
+$output = exec('C:\Users\User\AppData\Local\Programs\Python\Python37\python.exe get_min10.py');
 
 echo "<script>
 var data = ".$output.";

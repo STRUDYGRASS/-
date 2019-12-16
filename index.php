@@ -31,6 +31,15 @@
                 }
             });
             }
+            else if ($("select[name='chose_graph'] option:selected").index() == 2){
+                $.ajax({
+                url: 'get_min10.php',
+                cache: false,
+                success: function(html) {
+                    $("#show_ground").html(html);
+                }
+            }); 
+            }
             else if ($("select[name='chose_graph'] option:selected").index() == 3){
                 $.ajax({
                 url: 'scatter_alt-tmp.php',
