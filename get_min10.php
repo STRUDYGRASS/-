@@ -3,12 +3,13 @@
     <head>
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <?php
-#header("Content-type: text/html; charset=utf-8");
 set_time_limit(0);
 $output = exec('C:\Users\User\AppData\Local\Programs\Python\Python37\python.exe get_min10.py');
 
 echo "<script>
-var data = ".$output.";
+var data = ";
+echo iconv("GB2312","UTF-8",$output);
+echo ";
 </script>";
 ?>
 <script src="script/echarts.js"></script>
