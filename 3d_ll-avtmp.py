@@ -1,4 +1,4 @@
-#平均气温和经纬度的关系
+#经纬度和平均气温的关系
 import pymongo
 def tem_jw():
     client = pymongo.MongoClient('mongodb://39.106.163.153:27017')

@@ -1,3 +1,4 @@
+#人均GDP和平均气温的关系
 import pymongo
 def tem_PERGDP():
     client = pymongo.MongoClient('mongodb://39.106.163.153:27017')

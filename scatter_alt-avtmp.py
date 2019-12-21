@@ -1,4 +1,4 @@
-#温差和海拔高度的关系
+#海拔高度和平均气温的关系
 import pymongo
 def tem_dif_alt():
     client = pymongo.MongoClient('mongodb://39.106.163.153:27017')

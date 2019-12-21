@@ -4,7 +4,7 @@
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <?php
 set_time_limit(0);
-$output = exec('C:\Users\User\AppData\Local\Programs\Python\Python37\python.exe get_green-gdp.py');
+$output = exec('python scatter_gdp-tpop.py');
 echo "<script>
 var data = ";
 echo iconv("GB2312","UTF-8",$output);
@@ -24,9 +24,15 @@ var myChart = echarts.init(document.getElementById('test'));
 
 // 指定图表的配置项和数据
 var option = {
+    title: {
+        text: 'GDP和城市暂住人口的关系',
+        x:'center',
+        y:'top',
+        textAlign:'left'
+    },
     animation: false,
     legend: {
-        data: ['scatter']
+        show: false
     },
     tooltip: {
         trigger: 'item',

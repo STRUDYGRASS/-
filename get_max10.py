@@ -13,4 +13,3 @@ def max_10():
     print(max)
 if __name__ == '__main__':
     max_10()
-    

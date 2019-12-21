@@ -4,7 +4,7 @@
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <?php
 set_time_limit(0);
-$output = exec('C:\Users\User\AppData\Local\Programs\Python\Python37\python.exe get_ll-avtmp.py');
+$output = exec('python 3d_ll-avtmp.py');
 
 echo "<script>
 var data = ";
@@ -25,6 +25,12 @@ var myChart = echarts.init(document.getElementById('test'));
 
 // 指定图表的配置项和数据
 var option = {
+    title: {
+        text: '经纬度和平均温度的关系',
+        x:'center',
+        y:'top',
+        textAlign:'left'
+    },
     tooltip: {},
         visualMap: {
         max: 50,

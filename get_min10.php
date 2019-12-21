@@ -4,7 +4,7 @@
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <?php
 set_time_limit(0);
-$output = exec('C:\Users\User\AppData\Local\Programs\Python\Python37\python.exe get_min10.py');
+$output = exec('python get_min10.py');
 
 echo "<script>
 var data = ";
@@ -25,7 +25,10 @@ var myChart = echarts.init(document.getElementById('test'));
 // 指定图表的配置项和数据
 var option = {
     title: {
-        text: 'ECharts 入门示例'
+        text: '温度最低10大城市',
+        x:'center',
+        y:'top',
+        textAlign:'left'
     },
     tooltip: {},
     grid:{//直角坐标系内绘图网格
@@ -36,7 +39,8 @@ var option = {
             bottom:"20%" //
         },
     legend: {
-        data:['销量']
+        x: '90%',
+        data:['温度']
     },
     xAxis: {
         axisLabel : {//坐标轴刻度标签的相关设置。
@@ -48,7 +52,7 @@ var option = {
     yAxis: {
     },
     series: [{
-        name: '销量',
+        name: '温度',
         type: 'bar',
         data: data[1],
         itemStyle: {
