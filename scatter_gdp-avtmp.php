@@ -4,7 +4,7 @@
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <?php
 set_time_limit(0);
-$output = exec('C:\Users\User\AppData\Local\Programs\Python\Python37\python.exe scatter_alt-tmp.py');
+$output = exec('C:\Users\User\AppData\Local\Programs\Python\Python37\python.exe scatter_gdp-avtmp.py');
 echo "<script>
 var data = ";
 echo iconv("GB2312","UTF-8",$output);

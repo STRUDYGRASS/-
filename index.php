@@ -13,6 +13,8 @@
         <option value="option1">获取温度最高10大城市</option>
         <option value="option2" >获取温度最低10大城市</option>
         <option value="option3">获取平均温度和海拔的关系</option>
+        <option value="option4">获取GDP和平均温度的关系</option>    
+        <option value="option5">获取GDP和绿化率的关系</option>  
         </select>
 
         <button onclick="show_graph()">select</button>
@@ -42,7 +44,25 @@
             }
             else if ($("select[name='chose_graph'] option:selected").index() == 3){
                 $.ajax({
-                url: 'scatter_alt-tmp.php',
+                url: 'scatter_alt-avtmp.php',
+                cache: false,
+                success: function(html) {
+                    $("#show_ground").html(html);
+                }
+            });
+            }
+            else if ($("select[name='chose_graph'] option:selected").index() == 4){
+                $.ajax({
+                url: 'scatter_gdp-avtmp.php',
+                cache: false,
+                success: function(html) {
+                    $("#show_ground").html(html);
+                }
+            });
+            }
+            else if ($("select[name='chose_graph'] option:selected").index() == 5){
+                $.ajax({
+                url: 'get_green-gdp.php',
                 cache: false,
                 success: function(html) {
                     $("#show_ground").html(html);
