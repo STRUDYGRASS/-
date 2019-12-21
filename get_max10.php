@@ -38,18 +38,15 @@ var option = {
     legend: {
         data:['销量']
     },
-    xAxis: {
-        axisLabel : {//坐标轴刻度标签的相关设置。
-                interval:0,
-                rotate:"45"
-            },
+    xAxis3D: {
+
         data: data[0]
     },
-    yAxis: {
+    yAxis3D: {
     },
     series: [{
         name: '销量',
-        type: 'bar',
+        type: 'bar3D',
         data: data[1],
         itemStyle: {
                     normal: {
