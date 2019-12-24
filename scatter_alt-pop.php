@@ -25,7 +25,7 @@ var myChart = echarts.init(document.getElementById('test'));
 // 指定图表的配置项和数据
 var option = {
     title: {
-        text: '海拔和平均气温的关系',
+        text: '海拔和人口数量的关系',
         x:'center',
         y:'top',
         textAlign:'left'

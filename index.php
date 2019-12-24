@@ -77,7 +77,7 @@
             });
         } else if ($("select[name='chose_graph'] option:selected").index() == 5) {
             $.ajax({
-                url: 'get_alt-pop.php',
+                url: 'scatter_alt-pop.php',
                 cache: false,
                 success: function (html) {
                     $("#show_ground").html(html);

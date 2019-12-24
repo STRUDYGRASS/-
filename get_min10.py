@@ -4,7 +4,7 @@ def min_10():
     client = pymongo.MongoClient('mongodb://39.106.163.153:27017')
     collection = client.YUNFEI.weathers
     pipeline = [
-        {'$group':{'_id':'$NAME','min':{'$min':'$TAVG'}}},{'$sort':{'min':-1}}
+        {'$group':{'_id':'$NAME','min':{'$min':'$TAVG'}}},{'$sort':{'min':1}}
     ]
     min=[[],[]]
     for elem in list(collection.aggregate(pipeline))[:10]:
